@@ -1,0 +1,75 @@
+/* style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e0f7fa; /* Um azul bem claro como fundo */
+}
+
+.calculator {
+    background-color: #37474f; /* Cinza azulado escuro para o contêiner */
+    border-radius: 12px; /* Cantos mais arredondados */
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+    width: 320px; /* Largura fixa para melhor controle */
+}
+
+#display {
+    width: 100%;
+    padding: 24px;
+    font-size: 32px; /* Fonte maior */
+    text-align: right;
+    border: none;
+    background-color: #455a64; /* Cinza azulado um pouco mais claro para o display */
+    color: #eceff1; /* Texto branco acinzentado */
+    box-sizing: border-box;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+button {
+    padding: 20px;
+    font-size: 24px; /* Fonte maior nos botões */
+    border: none;
+    background-color: #546e7a; /* Cinza azulado médio para os botões */
+    color: #eceff1;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transição suave para hover e active */
+    border-radius: 8px; /* Arredondamento nos botões */
+    margin: 4px; /* Adiciona um pequeno espaço entre os botões */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil nos botões */
+}
+
+button:hover {
+    background-color: #607d8b; /* Tom mais claro no hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais forte no hover */
+}
+
+button:active {
+    background-color: #455a64; /* Tom mais escuro ao pressionar */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra interna ao pressionar */
+}
+
+.equal {
+    grid-column: span 1;
+    background-color: #ff9800; /* Laranja para o botão de igual */
+    color: #fff;
+}
+
+.equal:hover {
+    background-color: #f57c00; /* Tom mais escuro no hover do igual */
+}
+
+.equal:active {
+    background-color: #e65100; /* Tom ainda mais escuro ao pressionar o igual */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.zero {
+    grid-column: span 2;
+}
